@@ -1,0 +1,57 @@
+html {
+  font-family: monospace;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card .card-content {
+  margin-top: 10px;
+}
+
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.todo {
+  border: 1px solid #666;
+  padding: 10px;
+}
+
+.todo-data {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.todo-name {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.todo-description {
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.todos-card {
+  display: block;
+  width: 400px;
+  margin: auto;
+}
