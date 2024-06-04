@@ -1,4 +1,4 @@
-<?php require('../includes/dbconn.php'); 
+<?php require('../core/dbconn.php'); 
 session_start();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -6,21 +6,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   $description = htmlspecialchars($_POST['description']);
   $categoriesId = $_POST['categoriesId'];
 
-  $sql = "INSERT INTO tasks(name, description, status, created_at) VALUES ('$name','$description', 'finished', NOW())";
+  $sql = "INSERT INTO todos(name, description, status) VALUES ('$name','$description', Null)";
   if($conn->query($sql)){
     $_SESSION['success'] = "task inserted Successfully";
   }else{
     $_SESSION['error'] = " inserting task failed";
   }
-  $taskId =$conn->lastInsertId();
+  $todoId =$conn->lastInsertId();
 
   foreach($categoriesId as $categoryId){
-    $sql ="INSERT INTO tasks_categories(tasks_id,categories_id) VALUES('$taskId','$categoryId')";
+    $sql ="INSERT INTO todo_categories(todo_id,category_id) VALUES('$todoId','$categoryId')";
     $conn->query($sql);
 
   }
   header('location:../index.php');  
 }
-
-
-?>
