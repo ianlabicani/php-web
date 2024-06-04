@@ -1,4 +1,4 @@
-<?php require('includes/dbconn.php'); 
+<?php require('core/dbconn.php'); 
 session_start();?>
 
 <?php
@@ -24,13 +24,13 @@ $todos = array(
   )
 );
 
+$sql ="SELECT id, name FROM categories";
+$stmt= $conn->query($sql);
+$categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
-<?php 
-    $sql ="SELECT id, name FROM categories";
-    $stmt= $conn->query($sql);
-    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
