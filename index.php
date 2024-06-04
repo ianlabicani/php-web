@@ -1,6 +1,6 @@
 <?php 
 require "./core/dbconn.php";
-require "./tasks/fetch.php";
+require "./todos/fetch.php";
 $todos = fetchTodos($conn);
 ?>
 

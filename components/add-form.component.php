@@ -4,7 +4,7 @@ $stmt= $conn->query($sql);
 $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<form action="tasks/insert.php" method="POST">
+<form action="todos/insert.php" method="POST">
     <div>
       <label for="">name</label>
       <input type="text" name="name" id="" required>
