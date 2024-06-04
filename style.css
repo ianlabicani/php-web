@@ -23,9 +23,15 @@ html {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .todo {
+  border: 1px solid #666;
+  padding: 10px;
+}
+
+.todo-data {
   display: flex;
   align-items: center;
   margin: 5px 0;
